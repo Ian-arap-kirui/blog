@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
+// import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
-const name = "Ian Mark";
+const hero = "Stories & Ideas";
 export const siteTitle = "Blog: Arap Kirui";
 
 export default function Layout({ children, home }) {
@@ -28,19 +28,19 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <Image
+            {/* <Image
               priority
               src="/images/profile.jpg"
               className={utilStyles.borderCircle}
               height={144}
               width={144}
               alt=""
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            /> */}
+            <h1 className={utilStyles.heading2Xl}>{hero}</h1>
           </>
         ) : (
           <>
-            <Link href="/">
+            {/* <Link href="/">
               <Image
                 priority
                 src="/images/profile.jpg"
@@ -49,10 +49,10 @@ export default function Layout({ children, home }) {
                 width={108}
                 alt=""
               />
-            </Link>
+            </Link> */}
             <h2 className={utilStyles.headingLg}>
               <Link href="/" className={utilStyles.colorInherit}>
-                {name}
+                {hero}
               </Link>
             </h2>
           </>

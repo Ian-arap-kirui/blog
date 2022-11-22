@@ -24,6 +24,15 @@
   font-size: 1.2rem;
   line-height: 1.5;
 }
+.headingSm {
+  text-align: center;
+  font-size: 15px;
+  line-height: 1;
+}
+.headingSm1 {
+  text-align: center;
+  font-size: 15px;
+}
 
 .borderCircle {
   border-radius: 9999px;
