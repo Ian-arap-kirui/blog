@@ -1,6 +1,8 @@
 ---
 title: "Cyclistic bike share analysis"
 author: "Kirui Ian Mark"
+hero: "/images/hero-cyclistic.jpg"
+desc: " The city of Long Beach, California has a bike share system in place which has been in operation since 2012. The system consists of two main components, a central station and a network of docking stations. The central station houses the bikes and the docking stations are located throughout the city. The system is operated by the city’s Department of Parks, Recreation, and Marine. The city’s bike share system is available to residents and visitors alike. The system is used primarily for recreation and transportation. The city’s bike share system has been successful in reducing traffic congestion and pollution, and promoting physical activity. The city’s bike share system has also been shown to be cost effective, with an estimated cost savings of $3.7 million over the course of the first five years of operation."
 date: "2021-10-10"
 output:
   slidy_presentation: default
@@ -13,6 +15,7 @@ output:
 
 How do annual members and casual riders use Cyclistic bikes
 differently?
+![Sign-in](/images/cyclistic.jpg)
 
 ## Problem Statement
 

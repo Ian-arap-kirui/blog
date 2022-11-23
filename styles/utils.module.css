@@ -18,6 +18,7 @@
   font-size: 1.5rem;
   line-height: 1.4;
   margin: 1rem 0;
+  text-align: center;
 }
 
 .headingMd {
@@ -26,12 +27,12 @@
 }
 .headingSm {
   text-align: center;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1;
 }
 .headingSm1 {
   text-align: center;
-  font-size: 15px;
+  font-size: 25px;
 }
 
 .borderCircle {
@@ -48,14 +49,124 @@
 
 .list {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  /* padding: 0; */
+  /* margin: 0; */
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  /* this determines the height of each article */
+  grid-auto-rows: minmax(100px, auto);
+  justify-items: stretch;
+  align-items: stretch;
+  justify-content: center;
+  grid-gap: 1em;
+  height: 60vh;
 }
 
 .listItem {
   margin: 0 0 1.25rem;
 }
+.list > li {
+  /* background: #eee; */
+}
+.list > li:first-child {
+  background: #fcf9f5;
+  grid-column: 1/3;
+  grid-row: 1/3;
+  /* border: 2px solid black; */
+  border-radius: 8px;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.list > li:first-child img {
+  width: 100%;
+  height: 50%;
 
+  margin: 0 0 0.5em;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.list > li:nth-child(n + 2) {
+  width: 100%;
+  background-color: #f9eedc;
+  justify-content: center;
+  /* align-items: center; */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* width: 15em; */
+  gap: 5px;
+
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.list > li:nth-child(n + 3) {
+  background-color: #f2f2f2;
+}
+
+.list > li:nth-child(n + 2) .postTitle {
+  font-size: 15px;
+  line-height: 15px;
+}
+.list > li:nth-child(n + 2) .postTitle2 {
+  font-size: 13px;
+  line-height: 15px;
+}
+.list > li:nth-child(n + 2) .lightDate {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.list > li:nth-child(n + 2) .lightDate > span {
+  display: none;
+}
+
+.list > li:nth-child(n + 2) img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  object-fit: cover;
+}
+.list > li:first-child .lightText {
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left; */
+
+  display: block; /* or inline-block */
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  line-height: 19px;
+  font-size: 18px;
+  margin: 4.5px 0;
+}
+.list > li:first-child .lightDate {
+  margin-bottom: -3px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+/* .list > li:nth-child(odd) {
+  background: #f6f5f2;
+  height: 100%;
+} */
+.postTitle {
+  font-weight: bold;
+}
 .lightText {
+  color: #666;
+}
+.lightDate {
   color: #666;
 }

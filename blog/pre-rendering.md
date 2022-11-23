@@ -1,5 +1,6 @@
 ---
 title: "Two Forms of Pre-rendering"
+hero: "/images/placeholder-img.jpg"
 date: "2020-01-01"
 ---
 

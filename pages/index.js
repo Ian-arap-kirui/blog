@@ -4,6 +4,7 @@ import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
+import Image from "next/image";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -23,19 +24,29 @@ export default function Home({ allPostsData }) {
       <section className={utilStyles.headingMd}>
         <p className={utilStyles.headingSm}>Hi, I'm Ian Mark</p>
         <p className={utilStyles.headingSm1}>
-          🫠let's talk about the latest story about data 🗣️...
+          🫠let's talk and read about data 🗣️...
         </p>
         {/* <p>Here are my blogs on various topics</p> */}
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>All Topics</h2>
+        {/* <h2 className={utilStyles.headingLg}>All Topics</h2> */}
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
+          {allPostsData.map(({ id, date, title, hero, desc }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={`/blog/${id}`}>{title}</Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
+              <img src={hero} alt="" />
+              <Link href={`/blog/${id}`} className={utilStyles.postTitle}>
+                {title}
+              </Link>
+
+              <div className={utilStyles.lightText}>{desc}</div>
+              <small className={utilStyles.lightDate}>
+                <Date dateString={date} className={utilStyles.dateTxt} />
+                <span>
+                  <Link href={`/blog/${id}`} className={utilStyles.postTitle2}>
+                    continue read
+                  </Link>{" "}
+                  📖
+                </span>
               </small>
             </li>
           ))}
